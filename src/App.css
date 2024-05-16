@@ -42,8 +42,16 @@
   }
 }
 
-.darkMode{
+.darkModes{
   position: absolute;
-  top: 20px;
-  right: 20px;
+    top: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    min-width: 50px;
+    border: 1px solid White;
+    border-radius: 8px;
+    max-width: 80px;
+    min-height: 30px;
+    max-height: 40px;
 }

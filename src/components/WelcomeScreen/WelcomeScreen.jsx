@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './WelcomeScreen.module.css'
-import logo from "../../assets/poke.png"
-import heart from "../../assets/pokeheart.png"
+import styles from './WelcomeScreen.module.css';
+import logo from "../../assets/poke.png";
+import heart from "../../assets/pokeheart.png";
 
-const WelcomeScreen = ({ onStart }) => (
-  <div className={styles.welcomeScreen}>
+const WelcomeScreen = ({ onStart, darkMode }) => (
+  <div className={`${styles.welcomeScreen} ${darkMode ? styles.darkMode : ''}`}>
     <img src={logo} alt="PokéAPI" className={styles.logo} />
-    <div className={styles.card}>
+    <div className={`${styles.card} ${darkMode ? styles.darkMode : ''}`}>
       <div className={styles.heartIcon}>
         <img src={heart} alt="Heart" />
       </div>
@@ -14,7 +14,7 @@ const WelcomeScreen = ({ onStart }) => (
       <p>Pokémon Appear One at a Time</p>
       <p>Choose "Like" or "Dislike"</p>
       <p>Build Your Favorite Team</p>
-      <button onClick={onStart} className={styles.startButton}>Let's Go!</button>
+      <button onClick={onStart} className={`${styles.startButton} ${darkMode ? styles.darkMode : ''}`}>Let's Go!</button>
     </div>
   </div>
 );

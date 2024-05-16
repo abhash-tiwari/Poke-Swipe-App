@@ -5,16 +5,17 @@ import LikedPokemon from './components/LikedPokemon/LikedPokemon';
 import { fetchRandomPokemon } from './api/api';
 import './App.css';
 
-// import './components/WelcomeScreen/WelcomeScreen.css';
-// import './components/PokemonCard/PokemonCard.css';
-// import './components/LikedPokemon/LikedPokemon.css';
-import logo from "./assets/poke.png"
-// import heart from "./assets/pokeheart.png"
+
+
 
 const App = () => {
   const [started, setStarted] = useState(false);
   const [pokemon, setPokemon] = useState(null);
-  const [likedPokemon, setLikedPokemon] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
+  const [likedPokemon, setLikedPokemon] = useState(() => {
+    const savedLikedPokemon = localStorage.getItem('likedPokemon');
+    return savedLikedPokemon ? JSON.parse(savedLikedPokemon) : [];
+  });
   
 
   const startApp = () => setStarted(true);
@@ -33,34 +34,37 @@ const App = () => {
   
 
   const handleLike = () => {
-    setLikedPokemon([...likedPokemon, pokemon]);
+    const updatedLikedPokemon = [...likedPokemon, pokemon];
+    setLikedPokemon(updatedLikedPokemon);
+    localStorage.setItem('likedPokemon', JSON.stringify(updatedLikedPokemon));
     getNextPokemon();
   };
 
   const handleDislike = () => {
     getNextPokemon();
   };
-
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode);
+  };
   return (
-    <div className="App">
-      <img src={logo} alt="PokéAPI" className="logo" />
-      <div className='darkMode'>
-        <button>Dark</button>
-      </div>
-     
-      {!started ? (
-        <WelcomeScreen onStart={startApp} />
-      ) : (
-        <>
-          {pokemon && (
-            <PokemonCard pokemon={pokemon} onLike={handleLike} onDislike={handleDislike} />
-          )}
-          {likedPokemon.length > 0 && (
-            <LikedPokemon likedPokemon={likedPokemon} />
-          )}
-        </>
-      )}
-    </div>
+    <div className={`App ${darkMode ? 'darkMode' : ''}`}>
+    <button onClick={toggleDarkMode} className='darkModes'>
+        {darkMode ? 'Light' : 'Dark'}
+      </button>
+   
+    {!started ? (
+      <WelcomeScreen onStart={startApp} darkMode={darkMode}/>
+    ) : (
+      <>
+        {pokemon && (
+          <PokemonCard pokemon={pokemon} onLike={handleLike} onDislike={handleDislike} darkMode={darkMode}/>
+        )}
+        {likedPokemon.length > 0 && (
+          <LikedPokemon likedPokemon={likedPokemon} darkMode={darkMode}/>
+        )}
+      </>
+    )}
+  </div>
   );
 };
 

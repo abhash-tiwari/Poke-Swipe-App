@@ -1,6 +1,7 @@
+
 .pokemonCard {
-    position: relative;
-    background: white; /* Default light card */
+   
+    background: rgb(233, 245, 249);
     border: 2px solid black;
     border-radius: 20px;
     padding: 20px;
@@ -8,15 +9,24 @@
     text-align: center;
     width: 300px;
     margin: 20px auto;
+    text-transform: uppercase;
+    position: relative;
+   
+  }
+  .pokemonCard.darkMode {
+    background: #333; 
+    color: white;
+    border: 2px solid white;
+  }
+  .placeholder img{
+    width: 100px;
+    height: 100px;
   }
   
-  .pokemon-card.dark-mode {
-    background: #333; /* Dark mode card */
-    color: white;
-  }
   
   .logo {
     width: 150px;
+    margin-top: 50px;
     margin-bottom: 10px;
   }
   
@@ -47,93 +57,121 @@
     margin: 10px 0;
   }
   
-  .pokemonType, .pokemonAbility {
-    background-color: #f0f0f0;
+  
+  .pokemonType {
+    background-color: #ffffff;
+    border: 1px solid black;
     border-radius: 5px;
     padding: 5px 10px;
     margin: 5px;
   }
-  
+  .pokemonType.darkMode {
+    color: rgb(233, 245, 249);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+  }
+  .pokemonAbility {
+    background-color: #1a9984;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+  }
+  .pokemonAbility.darkMode {
+    background-color: grey;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+  }
+
   :global(.fire) {
     background-color: #f08030;
-    color: white;
+    color: #1b1b04;
+}
+  :global(.dark) {
+    background-color: #6b4990;
+    color: #1b1b04;
 }
 
 :global(.water) {
     background-color: #3297c3;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.grass) {
     background-color: #31e920;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.electric) {
     background-color: #f7fb17;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.flying) {
     background-color: #a890f0;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.ground) {
     background-color: #ebb542;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.ice) {
     background-color: #42cfeb;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.poison) {
     background-color: #ad1c99;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.ghost) {
-    background-color: #1b1b04;
-    color: white;
+    background-color: #b7b714;
+    color: #000000;
 }
 
 :global(.psychic) {
     background-color: #279a68;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.rock) {
     background-color: #81988e;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.normal) {
     background-color: #e08d8d;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.bug) {
     background-color: #467d24;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.fighting) {
     background-color: #e71a1a;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.dragon) {
     background-color: #db0909;
-    color: white;
+    color: #1b1b04;
 }
 
 :global(.steel) {
     background-color: #92bfbe;
-    color: white;
+    color: #1b1b04;
 }
-  
+
+
   .buttons {
     display: flex;
     justify-content: space-around;
@@ -147,15 +185,25 @@
     border-radius: 5px;
     cursor: pointer;
   }
+  .dislikeButton.darkMode, .likeButton.darkMode {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid white;
+  }
   
   .dislikeButton {
     background-color: #ff6961;
     color: white;
+    border: 1px solid black;
   }
   
   .likeButton {
     background-color: #4caf50;
     color: white;
+    border: 1px solid black;
   }
   
   .dislikeButton:hover {
@@ -165,4 +213,7 @@
   .likeButton:hover {
     background-color: #45a049;
   }
+  
+
+
   
