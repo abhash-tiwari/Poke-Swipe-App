@@ -1,0 +1,51 @@
+.likedPokemon {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .Heart {
+    color: red;
+  }
+  
+  .pokemonGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .pokemonCard {
+    background: white; /* Default light card */
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px;
+  }
+  
+  .pokemonCard.dark-mode {
+    background: #333; /* Dark mode card */
+    color: white;
+  }
+  
+  .pokemonImage {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .pokemonName {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  

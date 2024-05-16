@@ -1,0 +1,168 @@
+.pokemonCard {
+    position: relative;
+    background: white; /* Default light card */
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  .pokemon-card.dark-mode {
+    background: #333; /* Dark mode card */
+    color: white;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .heartIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .heartIcon img {
+    width: 50px;
+  }
+  
+  .pokemonImage {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .pokemonName {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .pokemonDetails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  
+  .pokemonType, .pokemonAbility {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+  }
+  
+  :global(.fire) {
+    background-color: #f08030;
+    color: white;
+}
+
+:global(.water) {
+    background-color: #3297c3;
+    color: white;
+}
+
+:global(.grass) {
+    background-color: #31e920;
+    color: white;
+}
+
+:global(.electric) {
+    background-color: #f7fb17;
+    color: white;
+}
+
+:global(.flying) {
+    background-color: #a890f0;
+    color: white;
+}
+
+:global(.ground) {
+    background-color: #ebb542;
+    color: white;
+}
+
+:global(.ice) {
+    background-color: #42cfeb;
+    color: white;
+}
+
+:global(.poison) {
+    background-color: #ad1c99;
+    color: white;
+}
+
+:global(.ghost) {
+    background-color: #1b1b04;
+    color: white;
+}
+
+:global(.psychic) {
+    background-color: #279a68;
+    color: white;
+}
+
+:global(.rock) {
+    background-color: #81988e;
+    color: white;
+}
+
+:global(.normal) {
+    background-color: #e08d8d;
+    color: white;
+}
+
+:global(.bug) {
+    background-color: #467d24;
+    color: white;
+}
+
+:global(.fighting) {
+    background-color: #e71a1a;
+    color: white;
+}
+
+:global(.dragon) {
+    background-color: #db0909;
+    color: white;
+}
+
+:global(.steel) {
+    background-color: #92bfbe;
+    color: white;
+}
+  
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .dislikeButton, .likeButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .dislikeButton {
+    background-color: #ff6961;
+    color: white;
+  }
+  
+  .likeButton {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .dislikeButton:hover {
+    background-color: #e64e4e;
+  }
+  
+  .likeButton:hover {
+    background-color: #45a049;
+  }
+  
