@@ -1,6 +1,4 @@
-
 .pokemonCard {
-   
     background: rgb(233, 245, 249);
     border: 2px solid black;
     border-radius: 20px;
@@ -11,7 +9,6 @@
     margin: 20px auto;
     text-transform: uppercase;
     position: relative;
-   
   }
   .pokemonCard.darkMode {
     background: #333; 

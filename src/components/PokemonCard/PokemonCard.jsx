@@ -4,6 +4,9 @@ import heart from "../../assets/pokeheart.png";
 import logo from "../../assets/poke.png";
 import img from "../../assets/pikachuimg.png";
 
+
+
+// Pokemon Card Layout
 const PokemonCard = ({ pokemon, onLike, onDislike, darkMode }) => {
   const { name, sprites, abilities, types } = pokemon;
   const imageUrl = sprites.other['dream_world'].front_default;
@@ -36,6 +39,7 @@ const PokemonCard = ({ pokemon, onLike, onDislike, darkMode }) => {
           <button onClick={onLike} className={` ${styles.likeButton}  ${darkMode ? styles.darkMode : ''}`}>Like</button>
         </div>
       </div>
+      
     </div>
   );
 };

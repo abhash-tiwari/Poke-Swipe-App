@@ -1,5 +1,7 @@
 import axios from 'axios';
 
+
+// Fetching Data from the api
 const API_URL = 'https://pokeapi.co/api/v2/pokemon';
 
 export const fetchRandomPokemon = async () => {
